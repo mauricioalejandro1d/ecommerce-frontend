@@ -1,0 +1,64 @@
+.form-producto {
+  margin-top: 40px;
+  padding: 20px;
+  border: 2px solid var(--dorado);
+  border-radius: 10px;
+  background-color: #000000ab;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin-inline: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-producto h2 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: var(--dorado);
+}
+
+.form-producto input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--dorado);
+  font-size: 14px;
+  outline: none;
+  background-color: #1a1a1a;
+  color: var(--white);
+}
+
+.form-producto input::placeholder {
+  color: #ccc;
+}
+
+.form-producto input[type="submit"] {
+  background-color: var(--dorado);
+  color: var(--black);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-producto input[type="submit"]:hover {
+  background-color: #d1b37f;
+}
+
+select, input[type="date"] {
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #222;
+  color: var(--white);
+  border: none;
+  border: 2px solid var(--dorado);
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
