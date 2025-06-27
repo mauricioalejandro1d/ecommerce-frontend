@@ -18,8 +18,8 @@ export default function Productos() {
       <h1 className="titulo-productos">NUESTRAS JOYAS</h1>
       <div className="productos-grid">
         {productos.map((producto) => (
-          <div className="producto-card" key={producto.id}>
-            <img src={producto.imagen} alt={producto.nombre} />
+          <div className="producto-card">
+  <img src={`/imagenes/img-card-${producto.id}.png`} alt={producto.nombre} />
             <h2>{producto.nombre}</h2>
             <p className="precio">$ {producto.precio}</p>
             <p className="resumen">{producto.descripcion.slice(0, 100)}...</p>

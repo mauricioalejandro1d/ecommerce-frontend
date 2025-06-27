@@ -1,70 +1,87 @@
-.producto-detalle {
+.detalle-producto {
   display: flex;
-  flex-wrap: wrap;
-  padding: 40px;
-  background-color: var(--black);
+  flex-direction: column;
+  align-items: center;
+  background-color: #111;
   color: white;
-  gap: 40px;
-  justify-content: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.detalle-img img {
-  width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+.detalle-hero img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  margin-bottom: 30px;
 }
 
 .detalle-info {
-  max-width: 600px;
+  text-align: center;
 }
 
-.precio-detalle {
-  font-size: 20px;
-  font-weight: bold;
+.nombre {
+  font-size: 36px;
   color: var(--dorado);
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
-.atributos {
+.descripcion-principal {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.detalle-datos ul {
   list-style: none;
   padding: 0;
-  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 30px;
 }
 
-.atributos li {
+.detalle-datos li {
   font-size: 16px;
-  border-bottom: 1px solid #333;
-  padding: 5px 0;
-}
-
-.btn-carrito {
-  margin-top: 20px;
-  padding: 12px 30px;
-  border: none;
-  background-color: var(--dorado);
-  color: var(--black);
-  font-weight: bold;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-carrito:hover {
-  background-color: var(--dorado);
-}
-
-.descripcion-box {
-  margin-top: 40px;
-  width: 100%;
-}
-
-.descripcion-box h3 {
-  font-size: 22px;
   margin-bottom: 10px;
+  border-left: 3px solid var(--dorado);
+  padding-left: 10px;
+  transition: 0.3s;
+}
+
+.detalle-datos li:hover {
+  transform: translateX(5px);
   color: var(--dorado);
 }
 
-.descripcion-box p {
+.botones {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.botones button {
+  padding: 12px 25px;
   font-size: 16px;
-  line-height: 1.7;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--dorado);
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botones button:hover {
+  background-color: #d4a94b;
+}
+
+.btn-comprar {
+  background-color: transparent;
+  border: 1px solid var(--dorado);
+  color: var(--dorado);
+}
+
+.btn-comprar:hover {
+  background-color: var(--dorado);
+  color: black;
 }

@@ -115,7 +115,7 @@ productos.forEach(p => {
 
         {productos.map((producto) => (
   <div key={producto.id} className="card-producto">
-    <img src={producto.imagen} alt={producto.nombre} />
+    <img src={`/imagenes/img-card-${producto.id}.png`} alt={producto.nombre} />
     <h3>{producto.nombre}</h3>
     <p>{producto.descripcion}</p>
     <p className="precio">$ {producto.precio}</p>
