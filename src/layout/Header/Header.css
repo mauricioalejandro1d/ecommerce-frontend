@@ -12,17 +12,17 @@ nav {
     
 }
 
-
-
 .enlace {
-
-    padding: 20px 25px;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-    width: 80px;
-    height: auto;
-
+  width: 80px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 nav a , i {
@@ -48,11 +48,10 @@ nav a , i {
 }
 
 .checkbtn {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: var(--white);
-    z-index: 102;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
 }
 
 .header-user {
@@ -81,124 +80,38 @@ nav a , i {
     display: none;
 }
 
-@media (max-width: 791px){
-    .enlace{
-        padding-left: 20px;
-    }
-}
 
-@media (max-width: 866px){
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        height: 60px;
-        background-color: var(--black);
-        padding: 0 20px;
-    }
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+    font-size: 28px;
+    padding-right: 10px;
+  }
 
+  .nav-list {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    background: #111;
+    transition: left 0.3s;
+    z-index: 99;
+  }
 
-    .checkbtn {
-        display: block;
-        position: absolute;
-    }
+  #check:checked ~ .nav-list {
+    left: 0;
+  }
 
-    #check {
-        display: none;
-    }
-
-    .nav-list {
-        position: fixed;
-        left: -100%;
-        width: 100%;
-        top: 60px;
-        height: calc(100vh - 60px);
-        background-color: var(--black);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.4s ease-in-out;
-        z-index: 104;
-
-        .principal-nav{
-            color: var(--white);
-        }
-    }
-
-    #check:checked ~ .nav-list {
-        left: 0;
-    }
-
-    #check {
-        display: none;
-    }
-
-    .enlace{
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    nav ul {
-        width: 100%;
-        height: 100vh;
-        background-color: var(--black);
-        top: 80px;
-        left: 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: all .5s ease-out;
-        font-size: 30px;
-    }
-
-    #check:checked ~ ul {
-        left: 0;
-    }
-
-    nav ul li {
-        display: block;
-        padding: 20px;
-        transition: background-color 0.1s ease-in-out;
-        }
-
-    nav ul li a {
-        color: var(--black);
-        transition: color 0.3s ease-in-out;
-    }
-
-
-    nav ul li:hover {
-        width: 100%;
-        background-color: var(--dorado);
-        color: var(--black);
-    }
-
-    nav ul li:hover a {
-        color: var(--black) !important;
-        font-size: 20px;
-    }
+  .nav-list li {
+    margin: 20px 0;
+  }
 }
 
 
-.nav-list .active {
-  color: var(--dorado);
-  font-weight: bold;
-}
-
-.carrito-contador {
-  background-color: var(--dorado);
-  color: var(--black);
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-  position: relative;
-  top: -10px;
-  right: 10px;
+@media (min-width: 769px) {
+  .checkbtn {
+    display: none;
+  }
 }

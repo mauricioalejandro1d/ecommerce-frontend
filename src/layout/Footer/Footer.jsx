@@ -23,8 +23,8 @@ export default function Footer() {
 </div>
 
   <div className="footer-logo">
-    <img src="/public/imagenes/LOGO-macjewelry.png" alt="Logo" />
-    <p>Copyright © 2025 CAM'JEWELRY</p>
+    <img src="/imagenes/LOGO-macjewelry.png" alt="Logo" />
+    <p>Copyright © 2025 MAC'JEWELRY</p>
   </div>
 
   <div className="footer-contact">

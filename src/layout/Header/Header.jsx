@@ -3,20 +3,24 @@ import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 
 export default function Header({ carritoTotal = 0 }) {
   return (
-        <header>
+   <header>
   <nav>
     <input type="checkbox" id="check" />
+    
     <label htmlFor="check" className="checkbtn">
-      <i className="fi fi-br-menu-burger" />
+      <FontAwesomeIcon icon={faBars} />
     </label>
+    
     <a href="#" className="enlace">
       <img src="/imagenes/LOGO-macjewelry.png" alt="Logo" className="logo" />
     </a>
+
     <ul className="nav-list">
       <li><NavLink to="/" className="principal-nav">Principal</NavLink></li>
       <li><NavLink to="/register">Registro</NavLink></li>
@@ -26,12 +30,14 @@ export default function Header({ carritoTotal = 0 }) {
       <li><NavLink to="/productos">Productos</NavLink></li>
       <li><NavLink to="/admin-usuarios">Admin Usuarios</NavLink></li>
     </ul>
+
     <div className="header-user">
-  <FontAwesomeIcon icon={faShoppingCart} />
-  {carritoTotal > 0 && <span className="carrito-contador">{carritoTotal}</span>}
-  <FontAwesomeIcon icon={faUser} />
-</div>
+      <FontAwesomeIcon icon={faShoppingCart} />
+      {carritoTotal > 0 && <span className="carrito-contador">{carritoTotal}</span>}
+      <FontAwesomeIcon icon={faUser} />
+    </div>
   </nav>
 </header>
+
   )
 }
