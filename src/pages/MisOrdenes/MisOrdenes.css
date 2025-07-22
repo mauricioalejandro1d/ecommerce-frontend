@@ -1,0 +1,60 @@
+/* src/pages/MisOrdenes/MisOrdenes.css */
+
+.mis-ordenes {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ordenes-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.orden-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #daa520;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.orden-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.orden-productos {
+  margin: 1rem 0;
+}
+
+.orden-productos ul {
+  margin-left: 1rem;
+}
+
+.orden-total {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.estado.pendiente {
+  color: orange;
+  font-weight: bold;
+}
+
+.estado.completado {
+  color: green;
+  font-weight: bold;
+}
+
+.estado.cancelado {
+  color: red;
+  font-weight: bold;
+}

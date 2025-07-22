@@ -1,0 +1,65 @@
+.carrito-container {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.carrito-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  gap: 20px;
+  background-color: var(--black-opaco);
+  padding: 15px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.carrito-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carrito-item h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.carrito-item button {
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid var(--dorado);
+  color: var(--dorado);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carrito-total {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.carrito-total span {
+  font-size: 20px;
+  color: var(--dorado);
+  font-weight: bold;
+}
+
+.btn-confirmar {
+  background-color: var(--dorado);
+  border: none;
+  padding: 10px 20px;
+  color: var(--white);
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}

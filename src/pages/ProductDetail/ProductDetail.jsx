@@ -2,8 +2,11 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./ProductDetail.css";
+import axiosInstance from '../../api/axiosInstance';
+import { useOrder } from '../../context/OrderContext';
 
-export default function ProductDetail({ agregarAlCarrito }) {
+export default function ProductDetail() {
+  const { addItemToCart } = useOrder();
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
 
@@ -60,7 +63,7 @@ const descripcionLujosa = descripcionesExtras[producto.nombre] || producto.descr
         </div>
 
         <div className="botones">
-          <button onClick={() => agregarAlCarrito(producto)}>AGREGAR AL CARRITO</button>
+          <button onClick={() => addItemToCart(producto)}>AGREGAR AL CARRITO</button>
           <button className="btn-comprar">COMPRAR AHORA</button>
         </div>
       </div>

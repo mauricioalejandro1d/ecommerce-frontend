@@ -80,6 +80,19 @@ nav a , i {
     display: none;
 }
 
+.logout-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background-color: #c9302c;
+}
+
 
 @media (max-width: 768px) {
   .checkbtn {
